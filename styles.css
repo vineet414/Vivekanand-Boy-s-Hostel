@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background: #1a3c34;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: #2a5d52;
+    border-radius: 5px;
+}
+
+/* Home Section */
+#home {
+    background: url('https://via.placeholder.com/1200x400?text=Hostel+Banner') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1a3c34;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #2a5d52;
+}
+ .section {
+        padding: 2em;
+        text-align: center;
+        position: relative; /* For overlay positioning */
+    }
+    #home {
+        background-image: url('/img/pexels-apasaric-325185.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment:u; /* Optional: Parallax effect */
+        min-height: 600px; /* Adjust based on content */
+    }
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+        z-index: 1;
+    }
+    .home-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        z-index: 2; /* Content above overlay */
+    }
+    
+
+/* About and Facilities Sections */
+#about, #facilities, #gallery, #contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2, #facilities h2, #gallery h2, #contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.facility-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Gallery Slideshow */
+.slideshow-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+/*water cooler*/
+.section {
+        padding: 2em;
+        text-align: center;
+    }
+    .complaint-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5em;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .floor-status {
+        background-color: #f4f4f4;
+        padding: 1em;
+        border-radius: 8px;
+        text-align: left;
+    }
+    .floor-status h3 {
+        color: #2c3e50;
+        margin-bottom: 0.5em;
+    }
+    .floor-status p {
+        margin: 0.5em 0;
+        font-size: 1em;
+    }
+    .emoji {
+        font-size: 1.2em;
+        margin-right: 0.5em;
+    }
+    .working {
+        color: green;
+        font-weight: bold;
+    }
+    .not-working {
+        color: red;
+        font-weight: bold;
+    }
+    @media (max-width: 768px) {
+        .complaint-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+/* Contact Form */
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact textarea {
+    height: 100px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+.emoji {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+/* Footer */
+footer {
+    background: #1a3c34;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+}
+/* Payment Section */
+.payment-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-color:rgb(116, 245, 241);
+}
+
+.payment-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.sbi-collect {
+    margin-bottom: 40px;
+}
+
+.sbi-collect p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.sbi-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.sbi-button:hover {
+    background-color: #1557b0;
+}
+
+/* Fee Details */
+.fee-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.fee-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.fee-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.fee-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Receipt Upload Form */
+.receipt-upload {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.receipt-upload h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.receipt-upload form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.receipt-upload label {
+    font-size: 1em;
+    color: #333;
+}
+
+.receipt-upload input,
+.receipt-upload select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.receipt-upload button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.receipt-upload button:hover {
+    background-color: #218838;
+}
+
+#formMessage {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fee-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fee-card {
+        max-width: 100%;
+    }
+}
+.receipt-upload input,
+.receipt-upload select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivekanand Boy's Hostel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Existing sections like header, notice, etc. -->
+    
+    <!-- Payment Section -->
+    <section id="payment" class="payment-section">
+        <h2>Payment Information</h2>
+        
+        <!-- SBI Collect Link -->
+        <div class="sbi-collect">
+            <h3>Make a Payment</h3>
+            <p>Pay your hostel and mess fees securely via SBI Collect.</p>
+            <a href="https://www.onlinesbi.sbi/sbicollect/" target="_blank" class="sbi-button">Pay Now via SBI Collect</a>
+        </div>
+        
+        <!-- Fee Details -->
+        <div class="fee-details">
+            <div class="fee-card">
+                <h3>Hostel Fee</h3>
+                <p><strong>Monthly Fee:</strong> ₹1200</p>
+                <p><strong>one semester Fee:</strong> ₹7,200</p>
+                <p><strong>Includes:</strong> Accommodation, Wi-Fi, Security</p>
+                <p><strong>Due Date:</strong> 15th of each academic year</p>
+            </div>
+            <div class="fee-card">
+                <h3>Mess Fee</h3>
+                <p><strong>Monthly Fee:</strong> ₹3300</p>
+                <p><strong>one Semester Fee:</strong> ₹19,800</p>
+                <p><strong>Includes:</strong> Breakfast, Lunch, Dinner</p>
+                <p><strong>Due Date:</strong> 5th of each month</p>
+            </div>
+        </div>
+        
+        <!-- Payment Receipt Upload Form -->
+        <div class="receipt-upload">
+            <h3>Upload Payment Receipt</h3>
+            <form id="receiptForm" enctype="multipart/form-data">
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+                
+                <label for="roomNo">Room Number:</label>
+                <input type="number" id="roomNo" name="roomNo" required>
+                
+                <label for="amount">Amount Paid (₹):</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="session">Session:</label>
+                <select id="session" name="session" required>
+                    <option value="" disabled selected>Select Session</option>
+                     <option value="2021-2025">2021-2025</option>
+                      <option value="2022-2026">2022-2026</option>
+                       <option value="2023-2027">2023-2027</option>
+                        <option value="2024-2028">2024-2028</option>
+                    <option value="2025-2029">2025-2029</option>
+                </select>
+                
+                <label for="branch">Branch:</label>
+                <select id="branch" name="branch" required>
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="ECE">Electronics & Communication</option>
+                        <option value="EE">Electrical Engineering</option>
+                    <option value="CSE">Computer Science AI</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                </select>
+                
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester" required>
+                    <option value="" disabled selected>Select Semester</option>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                    <option value="4">4th</option>
+                    <option value="5">5th</option>
+                    <option value="6">6th</option>
+                    <option value="7">7th</option>
+                    <option value="8">8th</option>
+                </select>
+                
+                <label for="receipt">Upload Receipt (PDF):</label>
+                <input type="file" id="receipt" name="receipt" accept=".pdf" required>
+                
+                <button type="submit">Submit Receipt</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </section>
+    
+    <!-- Existing sections like footer -->
+    <script src="script.js"></script>
+</body>
+</html>
